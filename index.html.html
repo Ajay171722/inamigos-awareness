@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>InAmigos Foundation Awareness</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
+html{scroll-behavior:smooth;}
+
+body{
+background:#f8fffb;
+color:#222;
+}
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 8%;
+background:white;
+box-shadow:0 5px 20px rgba(0,0,0,.15);
+z-index:100;
+}
+
+nav h2{color:#00856f;}
+
+nav a{
+text-decoration:none;
+margin-left:22px;
+color:#00856f;
+font-weight:bold;
+font-size:18px;
+}
+
+.hero{
+height:100vh;
+background:
+linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+url("https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=1600");
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+padding:20px;
+}
+
+.hero h1{
+font-size:60px;
+margin-bottom:15px;
+}
+
+.hero h2{
+font-size:32px;
+color:#ffca28;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:22px;
+max-width:900px;
+line-height:1.7;
+margin:auto;
+}
+
+.btn{
+display:inline-block;
+margin-top:25px;
+padding:13px 35px;
+background:#ffca28;
+border-radius:40px;
+text-decoration:none;
+font-weight:bold;
+color:#111;
+transition:.3s;
+font-size:17px;
+}
+
+.btn:hover{
+background:white;
+transform:scale(1.08);
+}
+
+section{
+padding:75px 8%;
+text-align:center;
+}
+
+section h2{
+font-size:40px;
+color:#00856f;
+margin-bottom:25px;
+}
+
+section p{
+font-size:18px;
+line-height:1.8;
+}
+
+.about-section{
+background:#eafff6;
+}
+
+.about-box{
+display:grid;
+grid-template-columns:1.2fr .8fr;
+gap:35px;
+align-items:center;
+max-width:1150px;
+margin:auto;
+background:white;
+padding:35px;
+border-radius:25px;
+box-shadow:0 10px 25px rgba(0,0,0,.15);
+text-align:left;
+}
+
+.about-box img{
+width:100%;
+border-radius:22px;
+box-shadow:0 10px 25px rgba(0,0,0,.2);
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
+margin-top:40px;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:22px;
+box-shadow:0 10px 25px rgba(0,0,0,.18);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card img{
+width:100%;
+height:210px;
+object-fit:cover;
+border-radius:18px;
+margin-bottom:15px;
+}
+
+.card h3{
+font-size:23px;
+color:#00695c;
+margin-bottom:15px;
+}
+
+.card p{
+font-size:17px;
+color:#333;
+line-height:1.7;
+}
+
+.small-btn{
+display:inline-block;
+margin-top:18px;
+padding:10px 22px;
+background:#00856f;
+color:white;
+text-decoration:none;
+border-radius:25px;
+font-weight:bold;
+font-size:16px;
+}
+
+.extra{
+background:#e8fff8;
+}
+
+.impact{
+background:linear-gradient(135deg,#11998e,#38ef7d);
+color:white;
+}
+
+.impact h2{
+color:white;
+}
+
+.stats-section{
+background:#111;
+color:white;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:40px;
+padding:90px 8%;
+text-align:center;
+}
+
+.stat-box .icon{
+font-size:55px;
+}
+
+.stat-box h1{
+font-size:60px;
+}
+
+.stat-box p{
+letter-spacing:4px;
+color:#ddd;
+font-size:17px;
+}
+
+.blog{
+background:white;
+}
+
+.blog .card{
+text-align:left;
+}
+
+.final-join{
+background:#eafff6;
+text-align:center;
+padding:55px 8%;
+}
+
+.final-join h2{
+font-size:34px;
+color:#00856f;
+font-weight:bold;
+}
+
+.join-text{
+max-width:900px;
+margin:auto;
+font-size:18px;
+line-height:1.6;
+}
+
+.quote-box{
+margin:30px auto 0;
+max-width:850px;
+background:white;
+padding:30px;
+border-radius:25px;
+box-shadow:0 12px 25px rgba(0,0,0,.15);
+}
+
+.quote-box h1{
+font-size:38px;
+color:#00856f;
+font-weight:bold;
+font-style:italic;
+margin-bottom:18px;
+}
+
+.quote-box p{
+font-size:20px;
+font-style:italic;
+line-height:1.6;
+color:#333;
+}
+
+.quote-box h3{
+margin-top:20px;
+font-size:20px;
+color:#00856f;
+}
+
+.footer{
+background:#0b1324;
+color:white;
+padding:70px 8% 25px;
+}
+
+.footer-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:45px;
+}
+
+.footer span{
+color:#00c781;
+}
+
+.footer p,
+.footer a{
+color:#b8c2d6;
+text-decoration:none;
+display:block;
+margin-bottom:12px;
+font-size:17px;
+}
+
+.footer h2,
+.footer h3{
+margin-bottom:20px;
+}
+
+@media(max-width:700px){
+nav{
+flex-direction:column;
+}
+
+nav a{
+display:inline-block;
+margin:8px;
+}
+
+.hero h1{
+font-size:38px;
+}
+
+.hero h2{
+font-size:24px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+.about-box{
+grid-template-columns:1fr;
+}
+
+.quote-box h1{
+font-size:30px;
+}
+
+.quote-box p{
+font-size:18px;
+}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<h2>💚 InAmigos Foundation</h2>
+<div>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#projects">Initiatives</a>
+<a href="#awareness">Awareness</a>
+<a href="#blog">Blog</a>
+<a href="#join">Join</a>
+</div>
+</nav>
+
+<div class="hero" id="home">
+<div>
+<h1>InAmigos Foundation</h1>
+<h2>NGO - Non Governmental Organization</h2>
+<p>
+Together creating hope through education, community support,
+women empowerment, animal welfare and environmental protection.
+</p>
+<a href="#about" class="btn">Explore More</a>
+</div>
+</div>
+
+<section class="about-section" id="about">
+<h2>About InAmigos Foundation</h2>
+
+<div class="about-box">
+<div>
+<p>
+InAmigos Foundation, founded on September 23, 2020 by
+Mr. Govind Shukla, Founder & CEO, is a Section 8 registered
+non-profit organization based in Chhattisgarh working across India
+to create sustainable social impact.
+</p>
+
+<br>
+
+<p>
+The foundation is recognized with 80G & 12A certification,
+CSR-1 registration, NITI Aayog registration and ISO 9001:2015
+certification, ensuring transparency, quality and accountability.
+</p>
+
+<br>
+
+<p>
+Through SEVA, BACHPANSHALA, JEEV, UDAAN,
+PRAKRITI and VIKAS, InAmigos supports education,
+food distribution, animal welfare, women empowerment,
+environment protection and youth development.
+</p>
+
+<br>
+
+<p>
+With volunteers, interns and partners, InAmigos believes in
+collective action to build an inclusive, compassionate and empowered society.
+</p>
+</div>
+
+<img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?q=80&w=900" alt="NGO volunteer activity">
+</div>
+</section>
+
+<section class="extra">
+<h2>Why Join Our Initiatives?</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>🤝 Serve Society</h3>
+<p>
+Take part in social activities that create a positive impact
+and improve the lives of people around us.
+</p>
+</div>
+
+<div class="card">
+<h3>🌱 Build a Better Future</h3>
+<p>
+Your small contribution can support education,
+environment and community development.
+</p>
+</div>
+
+<div class="card">
+<h3>💡 Learn & Inspire</h3>
+<p>
+Develop leadership, teamwork and social responsibility
+while helping society.
+</p>
+</div>
+
+</div>
+</section>
+
+<section id="projects">
+<h2>Our Key Initiatives</h2>
+
+<p>
+Choose an initiative and become a part of meaningful social change.
+</p>
+
+<div class="cards">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1497486751825-1233686d5d80?q=80&w=800">
+<h3>📚 Project Bachpanshala</h3>
+<p>
+Bridging educational gaps by supporting underprivileged children
+through school education, digital literacy, life skills and learning support.
+</p>
+<a href="#join" class="small-btn">Join Initiative</a>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1593113598332-cd288d649433?q=80&w=800">
+<h3>🍲 Project SEVA</h3>
+<p>
+Supporting communities by distributing meals,
+clothes and essential resources to underprivileged people.
+</p>
+<a href="#join" class="small-btn">Join Initiative</a>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1450778869180-41d0601e046e?q=80&w=800">
+<h3>🐾 Project JEEV</h3>
+<p>
+Dedicated to animal welfare by feeding,
+caring and creating awareness for stray animals.
+</p>
+<a href="#join" class="small-btn">Join Initiative</a>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=800">
+<h3>🌱 Project PRAKRITI</h3>
+<p>
+Protecting the environment through tree plantation,
+sustainability and green awareness activities.
+</p>
+<a href="#join" class="small-btn">Join Initiative</a>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800">
+<h3>👩 Project UDAAN</h3>
+<p>
+Empowering women through skill development,
+awareness programs and financial independence.
+</p>
+<a href="#join" class="small-btn">Join Initiative</a>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=800">
+<h3>💻 Project VIKAS</h3>
+<p>
+Providing internships, training and career development
+opportunities for students and youth.
+</p>
+<a href="#join" class="small-btn">Join Initiative</a>
+</div>
+
+</div>
+</section>
+
+<section class="impact">
+<h2>Social Impact</h2>
+
+<p>
+Through continuous efforts, InAmigos Foundation spreads kindness,
+creates awareness and brings measurable positive changes in society.
+</p>
+
+<div class="cards">
+
+<div class="card">
+<h3>❤️ Community Support</h3>
+<p>
+Helping underprivileged communities through food distribution,
+clothing donation, education support and welfare activities.
+</p>
+</div>
+
+<div class="card">
+<h3>🌎 Sustainable Future</h3>
+<p>
+Promoting environmental responsibility through plantation drives,
+eco-friendly practices and sustainability awareness programs.
+</p>
+</div>
+
+<div class="card">
+<h3>😊 Creating Smiles</h3>
+<p>
+Every small contribution creates happiness, confidence,
+hope and opportunities for people in need.
+</p>
+</div>
+
+</div>
+</section>
+
+<section class="stats-section">
+
+<div class="stat-box">
+<div class="icon">👥</div>
+<h1>200+</h1>
+<p>VOLUNTEERS</p>
+</div>
+
+<div class="stat-box">
+<div class="icon">🇮🇳</div>
+<h1>28</h1>
+<p>STATES</p>
+</div>
+
+<div class="stat-box">
+<div class="icon">❤️</div>
+<h1>6</h1>
+<p>CAUSES</p>
+</div>
+
+<div class="stat-box">
+<div class="icon">🎁</div>
+<h1>50000+</h1>
+<p>BENEFICIARIES</p>
+</div>
+
+</section>
+
+<section class="extra" id="awareness">
+<h2>NGO Awareness</h2>
+
+<p>
+NGOs play an important role in solving social challenges
+by connecting people, resources and communities.
+</p>
+
+<br>
+
+<p>
+InAmigos Foundation creates awareness about education,
+hunger, environment, women empowerment, animal welfare
+and youth development.
+</p>
+
+<br>
+
+<p>
+This awareness webpage inspires visitors to participate
+through volunteering, partnerships and supporting social initiatives.
+</p>
+</section>
+
+<section class="blog" id="blog">
+<h2>From InAmigos Blog</h2>
+
+<p>
+The official InAmigos Foundation blog shares inspiring stories,
+project updates and awareness content about different social initiatives.
+</p>
+
+<div class="cards">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1497486751825-1233686d5d80?q=80&w=800">
+<h3>📚 BachpanShala – Shaping Dreams</h3>
+<p>
+BachpanShala supports underprivileged children through education,
+digital literacy, life skills and mentorship programs.
+</p>
+<a href="https://inamigosfoundation.org.in/single/bachpanshala-shaping-dreams-with-inamigos" class="small-btn">Read Blog</a>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1601758124510-52d02ddb7cbd?q=80&w=800">
+<h3>🐾 Project Jeev – Save a Life</h3>
+<p>
+Project Jeev creates awareness about animal welfare through feeding,
+care support and protection of stray animals.
+</p>
+<a href="https://inamigosfoundation.org.in/single/project-jeev-in-this-life-save-a-life" class="small-btn">Read Blog</a>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800">
+<h3>👩 Udaan – Women Rise</h3>
+<p>
+Udaan empowers women through skill development,
+confidence building, leadership and financial independence.
+</p>
+<a href="https://inamigosfoundation.org.in/single/udaan-women-rise-dreams-soar-change-begins" class="small-btn">Read Blog</a>
+</div>
+
+</div>
+</section>
+
+<section class="final-join" id="join">
+<h2>Join Us in Making a Difference 🤝</h2>
+
+<p class="join-text">
+Whether through volunteering, partnerships or support,
+every contribution strengthens our mission.
+Together we can create an inclusive and empowered society.
+</p>
+
+<div class="quote-box">
+<h1>Be the Reason Someone Smiles ❤️</h1>
+
+<p>
+"Great changes begin with small acts of kindness.
+Your time, compassion and efforts can create hope,
+spread happiness and transform lives."
+</p>
+
+<h3>
+Become a volunteer today and be a part of positive change 🌎
+</h3>
+
+<a href="https://www.inamigosfoundation.org.in/" class="btn">
+Become a Volunteer
+</a>
+</div>
+</section>
+
+<footer class="footer">
+<div class="footer-grid">
+
+<div>
+<h2>InAmigos <span>Foundation</span></h2>
+<p>
+A Section 8 registered non-profit organization
+working towards education, environment,
+social welfare and community development.
+</p>
+<p>FB &nbsp; IG &nbsp; LN &nbsp; YT</p>
+</div>
+
+<div>
+<h3>Quick Links</h3>
+<a href="#home">Home</a>
+<a href="#about">About Us</a>
+<a href="#projects">Key Initiatives</a>
+<a href="#blog">NGO Blog</a>
+<a href="#join">Volunteer Registration</a>
+</div>
+
+<div>
+<h3>Contact Information</h3>
+<p>📍 Chhattisgarh, India</p>
+<p>✉ support@inamigosfoundation.org</p>
+<p>🌐 www.inamigosfoundation.org</p>
+</div>
+
+</div>
+
+<center>
+© 2026 InAmigos Foundation Awareness Webpage
+</center>
+</footer>
+
+</body>
+</html>
